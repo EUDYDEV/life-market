@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 import Icon from './Icons';
@@ -73,6 +74,7 @@ export default function Navbar({ ready }) {
         </div>
       </div>
 
+      {createPortal(
       <div className={`drawer ${open ? 'open' : ''}`} aria-hidden={!open}>
         <div className="drawer-bg" onClick={() => setOpen(false)} />
         <div className="drawer-panel">
@@ -84,7 +86,9 @@ export default function Navbar({ ready }) {
           <NavLink to="/dashboard">Espace vendeur<Icon name="arrow" size={18} /></NavLink>
           <Link to="/vendre" className="btn btn-primary btn-lg"><Icon name="plus" size={20} /> Publier une annonce</Link>
         </div>
-      </div>
+      </div>,
+        document.body
+      )}
     </header>
   );
 }
