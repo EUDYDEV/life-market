@@ -25,10 +25,10 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 90px; }
+html { overflow-x: hidden; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 90px; }
 body {
   margin: 0; font-family: var(--font); color: var(--navy); background: var(--bg);
-  line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: clip;
   padding-bottom: calc(76px + env(safe-area-inset-bottom));
 }
 img, svg { max-width: 100%; }
