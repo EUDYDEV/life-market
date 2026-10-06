@@ -4,7 +4,7 @@ import Icon from '../components/Icons';
 import Reveal from '../components/Reveal';
 import ListingImage from '../components/ListingImage';
 import ListingCard from '../components/ListingCard';
-import { formatPrice, getCategory, getSeller, photoCount, timeAgo } from '../data/mock';
+import { formatPrice, getCategory, getSeller, photoCount, photoCredit, timeAgo } from '../data/mock';
 import { useStore } from '../context/Store';
 
 export default function ListingDetail() {
@@ -33,6 +33,7 @@ export default function ListingDetail() {
               {l.isBoosted && <span className="chip chip-boost"><Icon name="bolt" size={12} fill stroke={0} /> BOOSTÉ</span>}
               <span className="g-count">{idx + 1} / {total}</span>
             </div>
+            {photoCredit(l, idx) && <p className="photo-credit">Photo : {photoCredit(l, idx).author || 'auteur inconnu'} · {photoCredit(l, idx).license} · <Link to="/credits">Crédits</Link></p>}
             <div className="g-thumbs">
               {Array.from({ length: total }).map((_, i) => (
                 <button key={i} className={i === idx ? 'on' : ''} onClick={() => setIdx(i)} aria-label={`Photo ${i + 1}`}>

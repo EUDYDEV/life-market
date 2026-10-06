@@ -14,7 +14,7 @@ export default function Footer() {
         <div><h4>Plus</h4>{CATEGORIES.slice(5).map((c) => <Link key={c.id} to={`/explorer?cat=${c.id}`}>{c.name}</Link>)}</div>
         <div><h4>Vendeurs</h4><Link to="/vendre">Publier une annonce</Link><Link to="/offres">Offres</Link><Link to="/dashboard">Espace vendeur</Link></div>
       </div>
-      <div className="container footer-bottom"><span>© 2026 Life Market — portée par Life TV</span><span className="credit">E-PROJECT</span></div>
+      <div className="container footer-bottom"><span>© 2026 Life Market — portée par Life TV · <Link to="/credits" className="inline-link">Crédits photos</Link></span><span className="credit">E-PROJECT</span></div>
     </footer>
   );
 }
