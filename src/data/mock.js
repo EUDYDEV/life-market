@@ -1,5 +1,4 @@
 import PHOTOS from './photos.json';
-import CREDITS from './credits.json';
 
 // Toutes les données sont fictives (front-end uniquement).
 
@@ -68,9 +67,6 @@ export const LISTINGS = [
 
 export const photoCount = (l) => (l.photo ? 1 : (PHOTOS[l.id] || []).length);
 export const photoSrc = (l, n = 0) => (l.photo ? l.photo : PHOTOS[l.id]?.[n] ? `/assets/products/${PHOTOS[l.id][n]}` : null);
-
-export const photoCredit = (l, n = 0) => (l.photo ? null : CREDITS[l.id]?.[n] || null);
-export const allCredits = () => Object.entries(CREDITS).flatMap(([id, a]) => a.map((c) => ({ id, ...c })));
 
 export const getListing = (id) => LISTINGS.find((l) => String(l.id) === String(id));
 export const getSeller = (id) => SELLERS.find((s) => s.id === id);

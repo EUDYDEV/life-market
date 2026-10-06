@@ -14,7 +14,6 @@ import Seller from './pages/Seller';
 import Sell from './pages/Sell';
 import Offers from './pages/Offers';
 import Favorites from './pages/Favorites';
-import Credits from './pages/Credits';
 import Dashboard, { Overview, MyAds, Stats, Subscription, Messages, Boosts, Profile } from './pages/Dashboard';
 
 function ScrollToTop() {
@@ -48,7 +47,6 @@ export default function App() {
           <Route path="/vendre" element={<Sell />} />
           <Route path="/offres" element={<Offers />} />
           <Route path="/favoris" element={<Favorites />} />
-          <Route path="/credits" element={<Credits />} />
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<Overview />} />
             <Route path="annonces" element={<MyAds />} />
