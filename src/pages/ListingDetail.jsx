@@ -60,8 +60,8 @@ export default function ListingDetail() {
             </Link>
 
             <div className="d-cta">
-              <a className="btn btn-wa btn-lg" href={`https://wa.me/2250700000000?text=${msg}`} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={22} /> Contacter sur WhatsApp</a>
-              <a className="btn btn-primary btn-lg" href="tel:+2250700000000"><Icon name="phone" size={22} /> Appeler le vendeur</a>
+              <a className="btn btn-wa btn-lg" href={`https://wa.me/2250555258075?text=${msg}`} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={22} /> Contacter sur WhatsApp</a>
+              <a className="btn btn-primary btn-lg" href="tel:+2250555258075"><Icon name="phone" size={22} /> Appeler le vendeur</a>
               <button className={`btn btn-ghost btn-lg fav-btn ${fav ? 'on' : ''}`} onClick={() => toggleFav(l.id)}><Icon name="heart" size={22} fill={fav} /> {fav ? 'Dans vos favoris' : 'Ajouter aux favoris'}</button>
             </div>
             <button className="share" onClick={() => { navigator.clipboard?.writeText(window.location.href); say('Lien copié'); }}><Icon name="share" size={16} /> Partager l'annonce</button>

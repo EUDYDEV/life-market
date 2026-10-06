@@ -31,8 +31,8 @@ export default function Seller() {
               </div>
             </div>
             <div className="seller-btns">
-              <a className="btn btn-wa" href="https://wa.me/2250700000000" target="_blank" rel="noreferrer"><Icon name="whatsapp" size={20} /> WhatsApp</a>
-              <a className="btn btn-primary" href="tel:+2250700000000"><Icon name="phone" size={20} /> Contacter</a>
+              <a className="btn btn-wa" href="https://wa.me/2250555258075" target="_blank" rel="noreferrer"><Icon name="whatsapp" size={20} /> WhatsApp</a>
+              <a className="btn btn-primary" href="tel:+2250555258075"><Icon name="phone" size={20} /> Contacter</a>
             </div>
           </div>
           <p className="seller-bio">{s.bio}</p>
