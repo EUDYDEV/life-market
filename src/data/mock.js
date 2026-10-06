@@ -66,7 +66,7 @@ export const LISTINGS = [
 ];
 
 export const photoCount = (l) => (l.photo ? 1 : (PHOTOS[l.id] || []).length);
-export const photoSrc = (l, n = 0) => (l.photo ? l.photo : PHOTOS[l.id]?.[n] ? `/assets/products/${PHOTOS[l.id][n]}` : null);
+export const photoSrc = (l, n = 0) => (l.photo ? l.photo : PHOTOS[l.id]?.[n] ? `${import.meta.env.BASE_URL}assets/products/${PHOTOS[l.id][n]}` : null);
 
 export const getListing = (id) => LISTINGS.find((l) => String(l.id) === String(id));
 export const getSeller = (id) => SELLERS.find((s) => s.id === id);

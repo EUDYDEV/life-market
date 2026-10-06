@@ -5,7 +5,7 @@ export default function Logo({ height = 38, to = '/', className = '' }) {
   const img = (
     <img
       className="logo-img"
-      src="/assets/logo.jpeg"
+      src={`${import.meta.env.BASE_URL}assets/logo.jpeg`}
       alt="Life Market"
       style={{ height, aspectRatio: '1520 / 355' }}
       draggable="false"
